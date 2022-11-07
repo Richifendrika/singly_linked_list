@@ -19,11 +19,19 @@ namespace singly_linked_list
 
         public list()
         {
-            START - null;
+            START = null;
         }
         public void addNote()
         {
-
+            int rollNo;
+            string nm;
+            Console.Write();
+            rollNo = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the roll name of the student: ");
+            nm = Console.ReadLine();
+            node.newnode = new node();
+            newnode.rollNumber = rollNo;
+            newnode.name = nm;
         }
     }
     class Program
