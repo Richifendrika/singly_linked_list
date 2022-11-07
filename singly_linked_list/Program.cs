@@ -99,20 +99,6 @@ namespace singly_linked_list
 
             }
         }
-        public bool ListEmpty()
-        {
-            if (listEmpty())
-                Console.WriteLine();
-            else
-            {
-                Console.WriteLine();
-                node currentNode;
-                for (currentNode = START; currentNode != null;
-                currentNode = currentNode.next)
-                    console.write(currentNode.rollnumber + "" + currentNode.name + "\n");
-                Console.WriteLine();
-            }
-        }
         public bool listEmpty()
         {
             if (START == null)
@@ -160,7 +146,7 @@ namespace singly_linked_list
                                     Console.WriteLine("\nRecord not found. ");
                                 else
                                     Console.WriteLine("record with roll number" +
-                                        rollNo + "Deleted";
+                                        rollNo + "Deleted");
                             }
                             break ;
                         case '3':
@@ -181,8 +167,24 @@ namespace singly_linked_list
                                 int num = Convert.ToInt32(Console.ReadLine());
                                 if (obj.search(num, ref previous, ref current) == false)
                                     Console.WriteLine("\nRecord not found");
+                                else
+                                    Console.WriteLine("\nRecord not found");
+                                Console.WriteLine("\nRoll number: " + current.rollnumber);
+                                Console.WriteLine("\nName: " + current.name);
+                            }
+                            break;
+                        case '5':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid Option");
+                                break;
                             }
                     }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("\ncheck for the value enterd");
                 }
             }
         }
